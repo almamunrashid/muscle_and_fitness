@@ -1,16 +1,5 @@
 ﻿
-<?php
-include_once 'include/db_connect.php';
-include_once 'include/functions.php';
- 
-sec_session_start();
- 
-if (login_check($mysqli) == true) {
-    $logged = 'in';
-} else {
-    $logged = 'out';
-}
-?>
+.
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,28 +84,7 @@ if (login_check($mysqli) == true) {
         
    
         
-   <?php
-    if(isset($_SESSION['username']))
- {
- echo '<form class="navbar-form navbar-right" role="form" action="include/logout.php">
-           
-             
-           
-            <input type="submit" class="btn btn-success" value="Sign-out">';
-}
- else echo '
-        
-          <form class="navbar-form navbar-right" role="form" method="post" action="include/process_login.php">
-           <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control" name="email">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control" name="password">
-            </div>
-            <input type="submit" class="btn btn-success" value="Sign in" onclick="formhash(this.form, this.form.password);">
-            
-          </form>
-          '; ?>
+   
 
         </div><!--/.navbar-collapse -->
       </div>
